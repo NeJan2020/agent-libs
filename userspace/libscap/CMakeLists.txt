@@ -82,6 +82,8 @@ endif()
 add_library(scap STATIC
 	${targetfiles})
 
+set_property(TARGET scap PROPERTY C_STANDARD 99)
+
 if(USE_BUNDLED_ZLIB AND NOT MINIMAL_BUILD)
 	add_dependencies(scap zlib)
 endif()
